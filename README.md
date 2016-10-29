@@ -6,8 +6,8 @@
     ##Ex 1: Recreate the following dataframe by creating vectors and 
 ##using the data.frame function:
 # I did 2 methods: a and df
-Age <- c(22,25,26)
-Weight <- c(150, 165, 120)
+   Age <- c(22,25,26)
+   Weight <- c(150, 165, 120)
 Sex <- c("M", "M", "F")
 Name <- c("Sam", "Frank", "Ami")
 
