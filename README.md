@@ -4,18 +4,18 @@
     Analysis with most of the powerull language in Math.
     
     ##Ex 1: Recreate the following dataframe by creating vectors and 
-##using the data.frame function:
-# I did 2 methods: a and df
-   Age <- c(22,25,26)
-   Weight <- c(150, 165, 120)
-Sex <- c("M", "M", "F")
-Name <- c("Sam", "Frank", "Ami")
+  ##using the data.frame function:
+  ## I did 2 methods: a and df
+     Age <- c(22,25,26)
+     Weight <- c(150, 165, 120)
+     Sex <- c("M", "M", "F")
+     Name <- c("Sam", "Frank", "Ami")
 
-a <- cbind.data.frame( Age, Weight, Sex)
-row.names(a)<- c("Sam", "Frank", "Ami")
-a
-d <- data.frame(row.names =Name, Age, Weight, Sex )
-d
+     a <- cbind.data.frame( Age, Weight, Sex)
+     row.names(a)<- c("Sam", "Frank", "Ami")
+     a
+     d <- data.frame(row.names =Name, Age, Weight, Sex )
+     d
 ##Ex2.Check if mtcars is a dataframe using is.data.frame()
 is.data.frame(mtcars)
 ##Ex3.Use as.data.frame() to convert a matrix into a dataframe:
