@@ -44,13 +44,13 @@
    ##Figure out how to use round() (check help(round)) to reduce this accuracy to only 
    ##2 decimal places.
    ##round(x, digits = 0)
-      df$perfomence <- round(df$perfomence, digits = 2)
-      head(df)
+     df$perfomence <- round(df$perfomence, digits = 2)
+     head(df)
    ##Ex 10: What is the average mpg for cars that have more than 100 hp 
    ##AND a wt value of more than 2.5.
       avg.mpg <- mean(df$mpg[ (df$hp>100) & (df$wt>2.5)])
       avg.mpg
-   ## method 2
+   ##method 2
       mean(subset( df, df$hp>100 & df$wt>2.5)$mpg)
 
    ##Ex 11: What is the mpg of the Hornet Sportabout?
