@@ -25,36 +25,36 @@
     ## Ex 4: Set the built-in data frame mtcars as a variable df. 
     ## We'll use this df variable for the rest of the exercises.
        df <- mtcars
- ## Ex 5: Display the first 6 rows of df
+    ## Ex 5: Display the first 6 rows of df
       head(mtcars)
- ## Ex 6: What is the average mpg value for all the cars?
+    ## Ex 6: What is the average mpg value for all the cars?
       avg <- mean(df$mpg)
       avg
- ##Ex 7: Select the rows where all cars have 6 cylinders (cyl column)
+    ##Ex 7: Select the rows where all cars have 6 cylinders (cyl column)
       mtcars[mtcars$cyl==6, ]
- ##Ex 8: Select the columns am,gear, and carb.
+    ##Ex 8: Select the columns am,gear, and carb.
       df(df$am, df$gear, df$carb)
       df[ , c("am", "gear", "carb")]
- ## Ex 9: Create a new column called performance, which is calculated by hp/wt.
+    ## Ex 9: Create a new column called performance, which is calculated by hp/wt.
       perfomence <- c(df$hp/df$wt)
       cbind(df, perfomence) 
- ## or method 2 
+    ## or method 2 
       df$perfomence <- df$hp/df$wt
-##Ex 10: Your performance column will have several decimal place precision.
-##Figure out how to use round() (check help(round)) to reduce this accuracy to only 
-## 2 decimal places.
+   ##Ex 10: Your performance column will have several decimal place precision.
+   ##Figure out how to use round() (check help(round)) to reduce this accuracy to only 
+   ## 2 decimal places.
 
-##round(x, digits = 0)
-df$perfomence <- round(df$perfomence, digits = 2)
-head(df)
-##Ex 10: What is the average mpg for cars that have more than 100 hp 
-## AND a wt value of more than 2.5.
+   ##round(x, digits = 0)
+      df$perfomence <- round(df$perfomence, digits = 2)
+      head(df)
+   ##Ex 10: What is the average mpg for cars that have more than 100 hp 
+   ## AND a wt value of more than 2.5.
 
-avg.mpg <- mean(df$mpg[ (df$hp>100) & (df$wt>2.5)])
-avg.mpg
-## method 2
-mean(subset( df, df$hp>100 & df$wt>2.5)$mpg)
+      avg.mpg <- mean(df$mpg[ (df$hp>100) & (df$wt>2.5)])
+      avg.mpg
+   ## method 2
+      mean(subset( df, df$hp>100 & df$wt>2.5)$mpg)
 
-##Ex 11: What is the mpg of the Hornet Sportabout?
-df[["Hornet Sportabout","mpg"]] 
+   ##Ex 11: What is the mpg of the Hornet Sportabout?
+      df[["Hornet Sportabout","mpg"]] 
 
