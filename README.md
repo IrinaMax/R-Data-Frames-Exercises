@@ -16,14 +16,14 @@
      a
      d <- data.frame(row.names =Name, Age, Weight, Sex )
      d
-   ##Ex2.Check if mtcars is a dataframe using is.data.frame()
+    ##Ex2.Check if mtcars is a dataframe using is.data.frame()
      is.data.frame(mtcars)
-   ##Ex3.Use as.data.frame() to convert a matrix into a dataframe:
+    ##Ex3.Use as.data.frame() to convert a matrix into a dataframe:
      mat <- matrix(1:25, nrow=5)
      mat <- as.data.frame(mat)
      mat
- ## Ex 4: Set the built-in data frame mtcars as a variable df. 
- ## We'll use this df variable for the rest of the exercises.
+    ## Ex 4: Set the built-in data frame mtcars as a variable df. 
+    ## We'll use this df variable for the rest of the exercises.
        df <- mtcars
  ## Ex 5: Display the first 6 rows of df
       head(mtcars)
