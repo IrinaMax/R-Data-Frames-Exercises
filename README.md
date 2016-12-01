@@ -1,7 +1,7 @@
 #   R-Data-Exercises
-   Polishilg skills with Udemy. It's easy and fun and remind me there are a lof of methods in R to write code. 
-   I like nice easy instructor and I may do course for girls who wanted to learn R  and try statistical 
-   Analysis with most of the powerfull language in Math.
+   Polishing skills with Udemy. It's easy and fun and remind me there are a lof of methods in R to write code. 
+   I like nice easy instructor and I may do course for girls who wanted to learn R  and try Statistical 
+   Analysis with my favorite tool on the most of the powerfull language in Math and Data Science.
     
     ##Ex 1: Recreate the following dataframe by creating vectors and 
     ##using the data.frame function:
