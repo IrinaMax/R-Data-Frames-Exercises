@@ -1,0 +1,46 @@
+# Built in R Feature and Functions
+#seq() : Create sequences
+#sort() : Sort a vector
+#rev() : Reverse element in object
+#str() : Show the sructure of an object
+#append() : Merge objects together( for vector and list)
+
+seq(10, 50, by=5)
+
+v <- c(3,6,1,8,36,48,4,94,52)
+sort(v)
+cv <- c("a", "g", "e", "t")
+sort(cv)
+
+v
+v1 <- c( 45,63,68)
+
+append(v,v1)
+append(v,cv) all vectors will be convert to the stringi
+
+# Checking the data types
+#is.   checking type of the data
+#as.   converting data type
+
+is.vector(v)
+is.matrix(v)
+
+print(sample(x =1:100, 3))
+
+addrand <- function(x){
+  ran <- sample(1:100, 1)
+  return(x+ran)
+}
+vec <- c(1:5)
+print(addrand(10))
+ result <- lapply(vec, addrand)
+print(result)
+result2 <- sapply(vec, addrand)
+print(result2)
+
+v3 <- 1:5
+time2 <- function(num) {
+  return(num*2)
+}
+print (v3)
+sapply(v3, time2)
