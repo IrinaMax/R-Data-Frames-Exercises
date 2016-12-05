@@ -44,12 +44,10 @@ print(paste(first, sec, thi))
 
   x <- c(1, 5, 90)
 if (x[3] > x[1] & x[3] > x[2]){
-
   n <- x[3]
 }else if (x[2] >x[1] & x[2] > x[3]) {
   n <- x[2]
 }else  {
-
   n <- x[1]
 }
 print(n)
