@@ -1,0 +1,26 @@
+library('dplyr')
+require('dplyr')
+head(mtcars)
+#Return rows of cars that have an mpg value greater than 20 and 6 cylinders.
+#result2 <- df %>% filter(mpg>20) %>% sample_n(size=5) %>% arrange(desc(mpg))
+df%>% filter(mpg>20, cyl==6)
+
+#Reorder the Data Frame by cyl first, then by descending wt.
+df %>% arrange(cyl, desc(wt))
+
+L#Select the columns mpg and hp
+df %>% select(mpg, hp)
+
+#Select the distinct values of the gear column.
+df %>% select(gear) %>% distinct()
+
+#Create a new column called "Performance" which is calculated by hp divided by wt.
+df %>% mutate(Perfomance = hp/wt)
+
+#Find the mean mpg value using dplyr.
+avg_mpg = mean(df$mpg, na.rm=TRUE)
+avg_mpg
+summarire(mtcars, avg_mpg = mean(mpg))
+
+#Use pipe operators to get the mean hp value for cars with 6 cylinders.
+df %>% filter(hp, cyl ==6) %>% summarise(avg_hp=mean(hp, na.rm=TRUE))
