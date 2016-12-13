@@ -1,0 +1,32 @@
+install.packages("dplyr")
+install.packages('nycflights13')
+
+library('dplyr')
+library('nycflights13')
+head(flights)
+## filtering and slicing data
+flights%>%head()
+summary(flights)
+#filter() (and slice())  
+head(filter(flights, month ==11, day == 3, carrier =="AA"))
+head(flights[flights$month==11 & flights$day ==3 & flights$carrier =='AA', ])
+
+slice(flights, 3:9)
+dim(flights)
+#arrange
+head(arrange(flights, year, month, day, desc(arr_time)))
+#select
+head(select(flights, carrier, arr_time, month))
+# renaming function
+head(rename(flights, air_carrier = carrier))
+# distinct
+distinct(select(flights, carrier))
+# mutate()  (and transmutate())
+head(mutate(flights, new_col = arr_delay - dep_delay))  ## will create new colomn
+head(transmute(flights, newcol_1 = arr_time +2))  ## will show the new created colomn
+# summarise
+summarise(flights, avg_air_time = mean(air_time, na.rm = TRUE))
+summarise(flights, total_time = sum(air_time, na.rm = TRUE))
+# sample of random 10 rows
+sample_n (flights, 10)
+sample_frac(flights, 0.1)
