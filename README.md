@@ -125,6 +125,8 @@
 
     pl_sc2 <- pl_sc + geom_point(aes(color = hp, size=hp))
     print(pl_sc2)  ## plot16
+![16](https://cloud.githubusercontent.com/assets/16123495/21574803/74094da2-ceae-11e6-82b4-da664af2ece0.png)
+    
     pl_sc3 <-  pl_sc2 + scale_color_gradient(low = 'black', high = 'green')
     print(pl_sc3) ## plot17
 
