@@ -97,8 +97,9 @@
 ![7](https://cloud.githubusercontent.com/assets/16123495/21574795/73eaabea-ceae-11e6-8f32-ec8294230a44.png)
    
     pl8 <-pl7 + xlab('Movie Rating') + ylab('Count') +theme(legend.position = "bottom")
-    print(pl8) ##plot8 with lables
- ![8](https://cloud.githubusercontent.com/assets/16123495/21574796/73f35d3a-ceae-11e6-845b-327a9f77db85.png)
+    print(pl8 + ggtitle("MY TITLE")) ##plot8 with TITLE and lables
+![8](https://cloud.githubusercontent.com/assets/16123495/21575087/187d3cde-ceb6-11e6-9ea9-42a04a678258.png)
+
 
 
 ## SCATERPLOTS
