@@ -9,6 +9,7 @@ head(movies)
 ## will use rating for Aestethis to make first plot
  pl <-ggplot(movies,aes(x=rating))
  print(pl+ geom_histogram())  # will give you the base histogram plot1
+ ![1](https://cloud.githubusercontent.com/assets/16123495/21574788/6c7329a0-ceae-11e6-8e63-03fd706dd534.png)
  print(pl+ geom_histogram(binwidth = 0.1)) ## will show mor precise solution plot2
  print(pl+ geom_histogram(binwidth = 0.1, color = "red")) # and add red countor plot3
 # then we need to use Geometry
