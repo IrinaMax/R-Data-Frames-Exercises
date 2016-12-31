@@ -90,7 +90,6 @@
     print(pl4) ## plot6 with adding x and y names
  ![6](https://cloud.githubusercontent.com/assets/16123495/21574794/73e6d02e-ceae-11e6-9bba-5537e838e97a.png)
 
-
     pl5 <- pl + geom_histogram(binwidth = 0.1, aes(fill = ..count..))
     pl7 <-pl5 + xlab('Movie Rating') + ylab('Count') 
     print(pl7) ##plot7
@@ -98,7 +97,7 @@
 ![7](https://cloud.githubusercontent.com/assets/16123495/21574795/73eaabea-ceae-11e6-8f32-ec8294230a44.png)
    
     pl8 <-pl7 + xlab('Movie Rating') + ylab('Count') +theme(legend.position = "bottom")
-    print(pl8) ##plot8
+    print(pl8) ##plot8 with lables
  ![8](https://cloud.githubusercontent.com/assets/16123495/21574796/73f35d3a-ceae-11e6-845b-327a9f77db85.png)
 
 
