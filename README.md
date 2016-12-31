@@ -55,4 +55,60 @@
 
     ##Ex 11: What is the mpg of the Hornet Sportabout?
       df[["Hornet Sportabout","mpg"]] 
+      
+Work with ggplot2 package
+
+##install.packages('ggplot2')
+#install.packages('ggplot2movies')
+library(ggplot2)
+library(ggplot2movies)
+
+# Data & Aesthetics
+colnames(movies)
+head(movies)
+## will use rating for Aestethis to make first plot
+ pl <-ggplot(movies,aes(x=rating))
+ print(pl+ geom_histogram())  # will give you the base histogram plot1
+ ![1](https://cloud.githubusercontent.com/assets/16123495/21574788/6c7329a0-ceae-11e6-8e63-03fd706dd534.png)
+ print(pl+ geom_histogram(binwidth = 0.1)) ## will show mor precise solution plot2
+ ![2](https://cloud.githubusercontent.com/assets/16123495/21574790/73dff024-ceae-11e6-9f65-1126d01cc7c6.png)
+ print(pl+ geom_histogram(binwidth = 0.1, color = "red")) # and add red countor plot3
+ ![3](https://cloud.githubusercontent.com/assets/16123495/21574791/73e22f2e-ceae-11e6-8c86-4fe7fad24d82.png)
+# then we need to use Geometry
+pl2 <- pl + geom_histogram(binwidth = 0.1, color = 'red', fill= "pink", alpha = 0.4)
+print(pl2) ## plot 4
+pl3 <- pl + geom_histogram(binwidth = 0.1, color = 'red', fill= "pink", alpha = 0)
+print(pl3) ## plot 5
+pl4 <-pl2 + xlab('Movie Rating') + ylab('Count')
+print(pl4) ## plot6 with adding x and y names
+
+
+pl5 <- pl + geom_histogram(binwidth = 0.1, aes(fill = ..count..))
+pl7 <-pl5 + xlab('Movie Rating') + ylab('Count') 
+print(pl7) ##plot7
+pl8 <-pl7 + xlab('Movie Rating') + ylab('Count') +theme(legend.position = "bottom")
+print(pl8) ##plot8
+
+
+## SCATERPLOTS
+library(ggplot2)
+df <- mtcars
+
+#DATA & AESTHETICS
+pl_sc <- ggplot(df,aes(x=wt,y=mpg))
+#GEOMETRY
+print(pl_sc + geom_point( alpha = 0.5, size = 5))    # alpha shows clarity 0:1, plot10
+print(pl_sc + geom_point(aes(size=hp)))    ## by horse power, plot11
+print(pl_sc + geom_point(aes(size = cyl)))  ## by cylinders, plot12
+print(pl_sc + geom_point(aes(size = factor(cyl))))  ## plot13
+print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5))  ## plot14
+
+print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5, color = "#8470ff")) ##plot15
+      
+# Hex color picker, you can use any code to pick any color www.color-hex.com
+
+pl_sc2 <- pl_sc + geom_point(aes(color = hp, size=hp))
+print(pl_sc2)  ## plot16
+pl_sc3 <-  pl_sc2 + scale_color_gradient(low = 'black', high = 'green')
+print(pl_sc3) ## plot17
 
