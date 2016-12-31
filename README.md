@@ -105,21 +105,25 @@ Work with ggplot2 package
     library(ggplot2)
     df <- mtcars
 
-#DATA & AESTHETICS
-pl_sc <- ggplot(df,aes(x=wt,y=mpg))
-#GEOMETRY
-print(pl_sc + geom_point( alpha = 0.5, size = 5))    # alpha shows clarity 0:1, plot10
-print(pl_sc + geom_point(aes(size=hp)))    ## by horse power, plot11
-print(pl_sc + geom_point(aes(size = cyl)))  ## by cylinders, plot12
-print(pl_sc + geom_point(aes(size = factor(cyl))))  ## plot13
-print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5))  ## plot14
+# DATA & AESTHETICS
+    pl_sc <- ggplot(df,aes(x=wt,y=mpg))
+# GEOMETRY
+    print(pl_sc + geom_point( alpha = 0.5, size = 5))    # alpha shows clarity 0:1, plot10
+ ![10](https://cloud.githubusercontent.com/assets/16123495/21574797/73f56328-ceae-11e6-9465-7d499c7d9148.png)   
+   
+     print(pl_sc + geom_point(aes(size=hp)))    ## by horse power, plot11
+ ![11](https://cloud.githubusercontent.com/assets/16123495/21574798/73f8a060-ceae-11e6-9c4c-72877db0dd45.png)     
+     
+     print(pl_sc + geom_point(aes(size = cyl)))  ## by cylinders, plot12
+     print(pl_sc + geom_point(aes(size = factor(cyl))))  ## plot13
+     print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5))  ## plot14
 
-print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5, color = "#8470ff")) ##plot15
+     print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5, color = "#8470ff")) ##plot15
       
 # Hex color picker, you can use any code to pick any color www.color-hex.com
 
-pl_sc2 <- pl_sc + geom_point(aes(color = hp, size=hp))
-print(pl_sc2)  ## plot16
-pl_sc3 <-  pl_sc2 + scale_color_gradient(low = 'black', high = 'green')
-print(pl_sc3) ## plot17
+    pl_sc2 <- pl_sc + geom_point(aes(color = hp, size=hp))
+    print(pl_sc2)  ## plot16
+    pl_sc3 <-  pl_sc2 + scale_color_gradient(low = 'black', high = 'green')
+    print(pl_sc3) ## plot17
 
