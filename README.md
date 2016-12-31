@@ -56,7 +56,7 @@
     ##Ex 11: What is the mpg of the Hornet Sportabout?
       df[["Hornet Sportabout","mpg"]] 
       
-Work with ggplot2 package
+# Work with ggplot2 package
 
     ##install.packages('ggplot2')
     #install.packages('ggplot2movies')
@@ -77,7 +77,7 @@ Work with ggplot2 package
      print(pl+ geom_histogram(binwidth = 0.1, color = "red")) # and add red countor plot3
  ![3](https://cloud.githubusercontent.com/assets/16123495/21574791/73e22f2e-ceae-11e6-8c86-4fe7fad24d82.png)
  
-# then we need to use Geometry
+## Then we need to use Geometry
     pl2 <- pl + geom_histogram(binwidth = 0.1, color = 'red', fill= "pink", alpha = 0.4)
     print(pl2) ## plot 4
 ![4](https://cloud.githubusercontent.com/assets/16123495/21574792/73e36b3c-ceae-11e6-8dc6-8728de01e2af.png)
@@ -105,9 +105,9 @@ Work with ggplot2 package
     library(ggplot2)
     df <- mtcars
 
-# DATA & AESTHETICS
+## DATA & AESTHETICS
     pl_sc <- ggplot(df,aes(x=wt,y=mpg))
-# GEOMETRY
+## GEOMETRY
     print(pl_sc + geom_point( alpha = 0.5, size = 5))    # alpha shows clarity 0:1, plot10
  ![10](https://cloud.githubusercontent.com/assets/16123495/21574797/73f56328-ceae-11e6-9465-7d499c7d9148.png)   
    
@@ -120,7 +120,7 @@ Work with ggplot2 package
 
      print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5, color = "#8470ff")) ##plot15
       
-# Hex color picker, you can use any code to pick any color www.color-hex.com
+## Hex color picker, you can use any code to pick any color www.color-hex.com
 
     pl_sc2 <- pl_sc + geom_point(aes(color = hp, size=hp))
     print(pl_sc2)  ## plot16
