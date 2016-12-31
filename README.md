@@ -83,11 +83,12 @@
 ![4](https://cloud.githubusercontent.com/assets/16123495/21574792/73e36b3c-ceae-11e6-8dc6-8728de01e2af.png)
 
     pl3 <- pl + geom_histogram(binwidth = 0.1, color = 'red', fill= "pink", alpha = 0)
-    print(pl3) ## plot 5
-    ![5](https://cloud.githubusercontent.com/assets/16123495/21574793/73e42f54-ceae-11e6-81b7-7ef1e69fe5a3.png)
+    print(pl3) ## plot 5  alfa shows the trancparancy
+![5](https://cloud.githubusercontent.com/assets/16123495/21574793/73e42f54-ceae-11e6-81b7-7ef1e69fe5a3.png)
+       
     pl4 <-pl2 + xlab('Movie Rating') + ylab('Count')
     print(pl4) ## plot6 with adding x and y names
-    ![6](https://cloud.githubusercontent.com/assets/16123495/21574794/73e6d02e-ceae-11e6-9bba-5537e838e97a.png)
+ ![6](https://cloud.githubusercontent.com/assets/16123495/21574794/73e6d02e-ceae-11e6-9bba-5537e838e97a.png)
 
 
     pl5 <- pl + geom_histogram(binwidth = 0.1, aes(fill = ..count..))
