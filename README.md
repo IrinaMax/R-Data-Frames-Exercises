@@ -135,4 +135,5 @@
     
     pl_sc3 <-  pl_sc2 + scale_color_gradient(low = 'black', high = 'green')
     print(pl_sc3) ## plot17
+![17](https://cloud.githubusercontent.com/assets/16123495/21574804/740c2040-ceae-11e6-8c12-6e8e1d8b7d4c.png)
 
