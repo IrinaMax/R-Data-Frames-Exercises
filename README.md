@@ -125,6 +125,7 @@
  ![14](https://cloud.githubusercontent.com/assets/16123495/21574801/73fe0442-ceae-11e6-9e67-5d2f5e2affd2.png)    
 
      print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5, color = "#8470ff")) ##plot15
+ ![15](https://cloud.githubusercontent.com/assets/16123495/21574802/7406bd26-ceae-11e6-93a0-c8e09b886d91.png)    
       
 ## Hex color picker, you can use any code to pick any color www.color-hex.com
 
