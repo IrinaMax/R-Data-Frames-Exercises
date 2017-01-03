@@ -116,7 +116,10 @@
  ![11](https://cloud.githubusercontent.com/assets/16123495/21574798/73f8a060-ceae-11e6-9c4c-72877db0dd45.png)     
      
      print(pl_sc + geom_point(aes(size = cyl)))  ## by cylinders, plot12
+ ![12](https://cloud.githubusercontent.com/assets/16123495/21574799/73f9152c-ceae-11e6-8157-0d007172d136.png)    
+     
      print(pl_sc + geom_point(aes(size = factor(cyl))))  ## plot13
+     
      print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5))  ## plot14
 
      print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5, color = "#8470ff")) ##plot15
