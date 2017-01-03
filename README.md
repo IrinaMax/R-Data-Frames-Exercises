@@ -119,6 +119,7 @@
  ![12](https://cloud.githubusercontent.com/assets/16123495/21574799/73f9152c-ceae-11e6-8157-0d007172d136.png)    
      
      print(pl_sc + geom_point(aes(size = factor(cyl))))  ## plot13
+ ![13](https://cloud.githubusercontent.com/assets/16123495/21574800/73fc1948-ceae-11e6-89b0-d601f896d3d9.png)    
      
      print(pl_sc + geom_point(aes(shape = factor(cyl)), size = 5))  ## plot14
 
