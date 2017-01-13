@@ -106,7 +106,7 @@
     library(ggplot2)
     df <- mtcars
 
-## DATA & AESTHETICS
+## Data and aesthics
     pl_sc <- ggplot(df,aes(x=wt,y=mpg))
 ## GEOMETRY
     print(pl_sc + geom_point( alpha = 0.5, size = 5))    # alpha shows clarity 0:1, plot10
