@@ -141,7 +141,7 @@
     df <- mpg
     pl.b <- ggplot(df, aes(x=class))  # class is a catigorical data in DF
     print(pl.b + geom_bar())
-    print(pl.b + geom_bar(color="red", fill="blue"))  # or can not
+    print(pl.b + geom_bar(color="red", fill="blue"))  # color shows the line around, you  not nessasary 
     print(pl.b + geom_bar(aes(fill=drv))) # will classify by color of class dvr 
     #  "dodge" will show staking = classify bars next to each other for easy to compare
     print(pl.b + geom_bar(aes(fill=drv), position = "dodge"))
