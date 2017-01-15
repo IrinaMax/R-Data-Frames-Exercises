@@ -138,33 +138,32 @@
 ![17](https://cloud.githubusercontent.com/assets/16123495/21574804/740c2040-ceae-11e6-8c12-6e8e1d8b7d4c.png)
 
 ## 2 Variables plot
-library(ggplot2)
-library(ggplot2movies)
-library(dplyr)
+    library(ggplot2)
+    library(ggplot2movies)
+    library(dplyr)
 
-pl <- ggplot(movies, aes(x=year,y=rating))
-pl2 <- pl + geom_bin2d()  ## pl1
-pl2 %>%print()
- ##  pl1 <-( pl + geom_bin2d()) %>% print()  can work like this also
+    pl <- ggplot(movies, aes(x=year,y=rating))
+    pl2 <- pl + geom_bin2d()  ## pl1
+    pl2 %>%print()
+    #  pl1 <-( pl + geom_bin2d()) %>% print()  can work like this also
 
-pl3 <- pl2+ scale_fill_gradient(high='red', low = 'green')
- print(pl3)
+    pl3 <- pl2+ scale_fill_gradient(high='red', low = 'green')
+    print(pl3)
  
- pl4 <- pl3 + geom_bin2d(binwidth=c(3,1))
-print(pl4)
+    pl4 <- pl3 + geom_bin2d(binwidth=c(3,1))
+    print(pl4)
  
-pl5 <- pl4+ scale_fill_gradient(high='red', low = 'blue')
-print(pl5)
-install.packages('hexbin')
+    pl5 <- pl4+ scale_fill_gradient(high='red', low = 'blue')
+    print(pl5)
+    install.packages('hexbin')
 
-##install.packages('stat_binhex')
-library('hexbin')
-require('hexbin')
-pl <- ggplot(movies, aes(x=year, y=rating))
-pl6 <- pl + geom_hex()
-pl7 <- pl6+ scale_fill_gradient(high='red', low = 'blue')
-print(pl7)
+    ##install.packages('stat_binhex')
+    require('hexbin')
+    pl <- ggplot(movies, aes(x=year, y=rating))
+    pl6 <- pl + geom_hex()
+    pl7 <- pl6+ scale_fill_gradient(high='red', low = 'blue')
+    print(pl7)
 
-pl8 <- pl+ geom_density2d()
-print(pl8)
-gqplot(x=years, y=rating, data = df, geom = "density2d")
+    pl8 <- pl+ geom_density2d()
+    print(pl8)
+    gqplot(x=years, y=rating, data = df, geom = "density2d")
