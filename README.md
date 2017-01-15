@@ -71,13 +71,13 @@
     print(pl+ geom_histogram())  # will give you the base histogram plot1
  ![1](https://cloud.githubusercontent.com/assets/16123495/21574788/6c7329a0-ceae-11e6-8e63-03fd706dd534.png)
  
-    print(pl+ geom_histogram(binwidth = 0.1)) ## will show mor precise solution plot2
+     print(pl+ geom_histogram(binwidth = 0.1)) ## will show mor precise solution plot2
  ![2](https://cloud.githubusercontent.com/assets/16123495/21574790/73dff024-ceae-11e6-9f65-1126d01cc7c6.png)
  
      print(pl+ geom_histogram(binwidth = 0.1, color = "red")) # and add red countor plot3
  ![3](https://cloud.githubusercontent.com/assets/16123495/21574791/73e22f2e-ceae-11e6-8c86-4fe7fad24d82.png)
  
-## Then we need to use Geometry
+## Now we need to use Geometry
     pl2 <- pl + geom_histogram(binwidth = 0.1, color = 'red', fill= "pink", alpha = 0.4)
     print(pl2) ## plot 4
 ![4](https://cloud.githubusercontent.com/assets/16123495/21574792/73e36b3c-ceae-11e6-8dc6-8728de01e2af.png)
