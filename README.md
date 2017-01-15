@@ -147,6 +147,22 @@
     print(pl.b + geom_bar(aes(fill=drv), position = "dodge"))
     # "fill will show percentage% 
     print(pl.b + geom_bar(aes(fill=drv), position = "fill"))
+    
+## Boxplots
+    df <- mtcars
+    pl.box <- ggplot(df, aes(x=cyl,y=mpg))
+    print(pl.box + geom_boxplot())
+    # but cyl a catigorical value, so we need to use as a factor for x
+    pl.box1 <- ggplot(df, aes(x=factor(cyl),y=mpg))
+    # add fill with color
+    print(pl.box1 + geom_boxplot(fill="blue"))
+    #we can also flip coordinates and make baxplot horizontal
+    pl.box1 <- ggplot(df, aes(x=factor(cyl),y=mpg))
+    print(pl.box1 + geom_boxplot()+ coord_flip())
+    #and we can add more color by group of factor cyl and theme as background
+    pl.box1 <- ggplot(df, aes(x=factor(cyl),y=mpg))
+    print(pl.box1 + geom_boxplot(aes(fill=factor(cyl)))+ theme_dark())
+
 
 
 ## 2 Variables plot
