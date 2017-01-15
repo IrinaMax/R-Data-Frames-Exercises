@@ -137,6 +137,18 @@
     print(pl_sc3) ## plot17
 ![17](https://cloud.githubusercontent.com/assets/16123495/21574804/740c2040-ceae-11e6-8c12-6e8e1d8b7d4c.png)
 
+## Barplots
+    df <- mpg
+    pl.b <- ggplot(df, aes(x=class))  # class is a catigorical data in DF
+    print(pl.b + geom_bar())
+    print(pl.b + geom_bar(color="red", fill="blue"))  # or can not
+    print(pl.b + geom_bar(aes(fill=drv))) # will classify by color of class dvr 
+    #  "dodge" will show staking = classify bars next to each other for easy to compare
+    print(pl.b + geom_bar(aes(fill=drv), position = "dodge"))
+    # "fill will show percentage% 
+    print(pl.b + geom_bar(aes(fill=drv), position = "fill"))
+
+
 ## 2 Variables plot
     library(ggplot2)
     library(ggplot2movies)
